@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset='utf-8'>
+    <meta http-equiv='X-UA-Compatible' content='IE=edge'>
+    <title>Validacion de formularios</title>
+    <meta name='viewport' content='width=device-width, initial-scale=1'>
+   
+</head>
+
+<body>
+    <fieldset>
+        <legend>Formulario de registro</legend>
+        <form action="" method="post" onsubmit="validacion()">
+            <label for="">No Control:</label>
+            <input type="text" name="caja_ncontrol" id="caja_ncontrol" maxlength="8" pattern="[0-9]{8}" onkeyup="return validacionNumero(this)">
+            <br>
+            <label for="">Nombre:</label>
+            <input type="text" name="caja_nombre" id="caja_nombre" maxlength="30" size="15">
+            <br>
+            <label for="">Primer Apeido:</label>
+            <input type="text" name="caja_ap1" id="caja_ap1" maxlength="30" size="15">
+            <br>
+            <label for="">Segundo Apeido:</label>
+            <input type="text" name="caja_ap2" id="caja_ap2" maxlength="30" size="15">
+            <br>
+            <label for="">Edad:</label>
+            <select name="select_edad" id="select_edad">
+                <option value="">elige una opcion</option>
+                <optgroup label="niña/o">
+                    <option value="1">1</option>
+                    <option value="1">2</option>
+                    <option value="1">3</option>
+                    <option value="1">4</option>
+                </optgroup>
+            </select>
+            <br>
+            <label for="tentacles">Semestre (1-12):</label>
+            <input type="number" id="tentacles" name="tentacles" min="1" max="12">
+            <br>
+            <label>Carrera:</label>
+            <br>
+            <label for="rad_isc">
+                <input type="radio" name="radio_carrera" id="rad_isc" value="ISC" checked>ISC
+            </label>
+            <br>
+            <label for="rad_im">
+                <input type="radio" name="radio_carrera" id="rad_im" value="IM">IM
+            </label>
+            <br>
+            <label for="rad_iia">
+                <input type="radio" name="radio_carrera" id="rad_iia" value="IIA">IIA
+            </label>
+            <br>
+            <label>Especialidades</label>
+            <label for="check_dev">
+                <input type="checkbox" class="ck" name="check_dev" id="check_dev" value="DEVOPS">DevOps
+            </label>
+            <br>
+            <label for="check_cd">
+                <input type="checkbox" class="ck" name="check_cd" id="check_cd" value="CD">Ciencia de Datos
+            </label>
+            <br>
+            <label for="check_ml">
+                <input type="checkbox" class="ck" name="check_ml" id="check_ml" value="ML">Machine Learning
+            </label>
+            <br>
+
+            <hr>
+            <label><input type="checkbox" name="check_cp" id="check_cp" value="cp">Comprobante de Pago?</label>
+            <div id="oculta" style="display: none;">
+                <label>Comprobante de pago</label>
+                <input type="file" name="" id="">
+            </div>
+            <hr>
+            <br>
+            <input type="button" value="Limpiar">
+            <input type="submit" value="Inscribir">
+        </form>
+    </fieldset>
+
+    <script src="vali.js"> </script>
+</body>
+
+</html>
